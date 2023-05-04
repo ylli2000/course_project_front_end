@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 1rem 2rem 0 2rem;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 0.2rem 0.4rem;
+  width: 100%;
+  max-width: 30rem;
+  border: 1px solid #ccc;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: #fff5f9;
+}
+
+button {
+  font: inherit;
+  background: #74ad18;
+  border: 1px solid #74ad18;
+  cursor: pointer;
+  color: white;
+  padding: 0.75rem 1rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+button:active {
+  background: #5b8517;
+  border-color: #60960b;
+}
+
+.projects {
+  margin: 1rem;
+  border: 1px solid #74ad18;
+}
+
+.projects header {
+  background: #74ad18;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#finished-projects {
+  border-color: #0c6fcc;
+}
+
+#finished-projects header {
+  background: #0c6fcc;
+}
+
+#active-projects {
+  border-color: #ff0062;
+}
+
+#active-projects header {
+  background: #ff0062;
+}
+
+.projects h2 {
+  margin: 0;
+  color: white;
+}
+
+.projects ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+}
+
+.projects li {
+  position: relative;
+  background-color: white;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  margin: 1rem;
+  -webkit-transition: all 180ms ease-in-out;
+  -moz-transition: all 180ms ease-in-out;
+  -ms-transition: all 180ms ease-in-out;
+  -o-transition: all 180ms ease-in-out;
+  transition: all 180ms ease-in-out;
+}
+
+.projects li:hover {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.36);
+}
+
+.projects li h2 {
+  color: #74ad18;
+  margin: 0.5rem 0;
+}
+
+#finished-projects li h2 {
+  color: #0c6fcc;
+}
+
+#active-projects li .title {
+  color: #ff0062;
+}
+
+.projects li .title,
+.projects li .priority {
+  display:inline;
+  vertical-align: middle;
+}
+
+.projects li .priority {
+  color: #575757;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+.projects li .description {
+  margin: 0;
+  padding-top: 0.3rem;
+  color: #575757;
+}
+.projects li .del-btn {
+  display: inline;
+  float: right;
+  margin: 0;
+  color: #aaa;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: all 80ms ease;
+  -moz-transition: all 80ms ease;
+  -ms-transition: all 80ms ease;
+  -o-transition: all 80ms ease;
+  transition: all 80ms ease;
+}
+.projects li .del-btn:hover {
+  font-size: 1.3rem;
+  color: #444;
+}
+
+#todo-projects .droppable {
+  background: #dbe9c6;
+}
+
+#active-projects .droppable {
+  background: #ffe3ee;
+}
+
+#finished-projects .droppable {
+  background: #d6e1ff;
+}
+
+.draggable {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.draggable:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.dragging:active {
+  background: #f0f0f0;
+}
+
+.drag-hover-after:after,
+.drag-hover-before:before {
+  border-bottom: 0.2rem solid;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: -0.6rem auto;
+}
+.drag-hover-after:after {
+  bottom: 0;
+}
+.drag-hover-before:before {
+  top: 0;
+}
+.drag-hover-after:after,
+.drag-hover-before:before {
+  border-bottom-color: #74ad18;
+}
+#active-projects .drag-hover-after:after,
+#active-projects .drag-hover-before:before {
+  border-bottom-color: #ff0062;
+}
+#finished-projects .drag-hover-after:after,
+#finished-projects .drag-hover-before:before {
+  border-bottom-color: #0c6fcc;
+}
+
+#user-input {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #74ad18;
+  background: #f7f7f7;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.4rem;
+  color: #666;
+}
+footer a {
+  color:#378ad8
+}
